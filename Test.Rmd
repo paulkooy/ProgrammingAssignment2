@@ -1,0 +1,25 @@
+---
+title: "Test"
+author: "Paul van der Kooy"
+date: "20 January 2016"
+output: html_document
+---
+
+ Function can be tested by the following commands:
+
+```
+source('~/DataScience/R-programming/ProgrammingAssignment2/cachematrix.R')
+mat <- makeCacheMatrix(rbind(c(1, -1/4), c(-1/4, 1)))
+cacheSolve(mat)
+[,1]      [,2]
+[1,] 1.0666667 0.2666667
+[2,] 0.2666667 1.0666667
+## Here the inverse is calculated
+
+cacheSolve(mat)
+getting cached matrix
+[,1]      [,2]
+[1,] 1.0666667 0.2666667
+[2,] 0.2666667 1.0666667
+## While the 2d call to the function retrieves the inverse from cache
+```
